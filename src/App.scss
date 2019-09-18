@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.notelist {
+    display: flex;
+
+    .mdc-card {
+        width: 350px;
+        margin: 1rem;
+
+        .mdc-card__primary-action {
+            flex-direction: row;
+
+            .mdc-card__media {
+                width: 90px;
+                height: 90px;
+                background-color: #454545;
+            }
+
+            .card__primary{
+                padding: 1rem;
+
+                h2,h3{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

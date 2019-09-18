@@ -1,31 +1,56 @@
 {
-  "name": "cornflower",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "cornflower",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@material/animation": "^3.1.0",
+        "@material/react-button": "^0.15.0",
+        "@material/react-card": "^0.15.0",
+        "@material/react-drawer": "^0.15.0",
+        "@material/react-icon-button": "^0.15.0",
+        "@material/react-list": "^0.15.0",
+        "@material/react-material-icon": "^0.15.0",
+        "@material/react-top-app-bar": "^0.15.0",
+        "@material/react-typography": "^0.15.0",
+        "@types/classnames": "^2.2.9",
+        "@types/node": "^12.7.5",
+        "@types/react": "^16.9.2",
+        "@types/react-dom": "^16.9.0",
+        "material-components-web": "^3.2.0",
+        "node-sass": "^4.12.0",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "react-router-dom": "^5.0.1",
+        "react-scripts": "3.1.1",
+        "recharts": "^1.7.1",
+        "typescript": "^3.6.3"
+    },
+    "scripts": {
+        "start": "npm-run-all -p watch-css start-js",
+        "build": "npm run build-css && react-scripts build",
+        "start-js": "react-scripts start",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "build-css": "node-sass-chokidar src/ -o src/",
+        "watch-css": "node-sass src/App.scss src/App.css --watch"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "node-sass-chokidar": "^1.3.5",
+        "npm-run-all": "^4.1.5"
+    }
 }
