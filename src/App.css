@@ -7,13 +7,43 @@ body {
   .notelist .mdc-card {
     width: 350px;
     margin: 1rem; }
+    .notelist .mdc-card a {
+      text-decoration: none;
+      -webkit-appearance: none;
+      color: #000; }
     .notelist .mdc-card .mdc-card__primary-action {
-      flex-direction: row; }
-      .notelist .mdc-card .mdc-card__primary-action .mdc-card__media {
-        width: 90px;
-        height: 90px;
-        background-color: #454545; }
-      .notelist .mdc-card .mdc-card__primary-action .card__primary {
+      flex-direction: column; }
+      .notelist .mdc-card .mdc-card__primary-action .card__header {
+        display: flex;
+        flex-direction: row; }
+        .notelist .mdc-card .mdc-card__primary-action .card__header .mdc-card__media {
+          width: 90px;
+          height: 90px;
+          background-color: #454545;
+          border-radius: 4px 0 0 0; }
+        .notelist .mdc-card .mdc-card__primary-action .card__header .card__primary {
+          padding: 1rem; }
+          .notelist .mdc-card .mdc-card__primary-action .card__header .card__primary h2,
+          .notelist .mdc-card .mdc-card__primary-action .card__header .card__primary h3 {
+            margin: 0; }
+    .notelist .mdc-card .recharts-responsive-container {
+      flex: 1; }
+
+.notedetail .mdc-card {
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 600px;
+  height: 90%; }
+  .notedetail .mdc-card .mdc-card__primary-action {
+    flex-direction: column; }
+    .notedetail .mdc-card .mdc-card__primary-action .card__header {
+      display: flex;
+      flex-direction: column; }
+      .notedetail .mdc-card .mdc-card__primary-action .card__header .mdc-card__media {
+        width: 100%;
+        height: 200px; }
+      .notedetail .mdc-card .mdc-card__primary-action .card__header .card__primary {
         padding: 1rem; }
-        .notelist .mdc-card .mdc-card__primary-action .card__primary h2, .notelist .mdc-card .mdc-card__primary-action .card__primary h3 {
+        .notedetail .mdc-card .mdc-card__primary-action .card__header .card__primary h2,
+        .notedetail .mdc-card .mdc-card__primary-action .card__header .card__primary h3 {
           margin: 0; }
