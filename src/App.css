@@ -47,3 +47,6 @@ body {
         .notedetail .mdc-card .mdc-card__primary-action .card__header .card__primary h2,
         .notedetail .mdc-card .mdc-card__primary-action .card__header .card__primary h3 {
           margin: 0; }
+
+ul a {
+  text-decoration: none; }
