@@ -11,7 +11,8 @@ import {
     PieChart,
     Pie,
     Sector,
-    Cell
+    Cell,
+    Bar
 } from "recharts";
 
 const data = [
@@ -65,7 +66,11 @@ const data01 = [
     { name: "Group C", value: 300 },
     { name: "Group D", value: 200 }
 ];
-const data02 = [{ name: "A1", value: 90 }, { name: "A2", value: 10 }];
+const data02 = [
+    { name: "OK", value: 90, fill: 'lightgreen' },
+    { name: "やり直し", value: 10, fill: 'gold' },
+    { name: "未習", value: 10, fill: 'tomato' }
+];
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
@@ -96,7 +101,7 @@ function AchievementChart() {
                     <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
                 </LineChart>
             </ResponsiveContainer>
-            <ResponsiveContainer width="100%" height={250}>
+            <ResponsiveContainer width="100%" height={300}>
                 <PieChart>
                     <Pie
                         data={data02}
@@ -106,15 +111,12 @@ function AchievementChart() {
                         innerRadius={70}
                         outerRadius={90}
                         fill="#82ca9d"
+                        startAngle={90}
+                        endAngle={450}
                         label
-                    >
-                        {data02.map((entry, index) => (
-                            <Cell
-                                key={`cell-${index}`}
-                                fill={COLORS[index % COLORS.length]}
-                            />
-                        ))}
-                    </Pie>
+                    />
+                    <Legend />
+                    <Tooltip />
                 </PieChart>
             </ResponsiveContainer>
         </div>

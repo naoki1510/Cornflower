@@ -1,9 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import '@material/theme/mdc-theme';
 
 body{
     font-family: 'Roboto', sans-serif;
+    overscroll-behavior-y: none;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+hr{
+    @include mdc-theme-prop(background-color,(
+        varname: --mdc-theme-on-surface,
+        fallback: black
+    ));
+    border: none;
+    height: 1px;
+    opacity: 0.12;
 }
 
 @import './scss/notelist';
 @import './scss/notedetail';
 @import './scss/menu.scss';
+@import './scss/login';

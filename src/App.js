@@ -13,7 +13,12 @@ import "@material/react-typography/index.scss";
 import "@material/react-icon-button/index.scss";
 import "@material/react-button/index.scss";
 import "./App.css";
+import "@material/react-linear-progress/index.scss";
+import "@material/react-snackbar/index.scss";
+import "@material/react-text-field/index.scss";
+
 import NoteDetail from "./components/main/notedetail/NoteDetail";
+import Login from "./components/main/Login";
 
 function App() {
     return (
@@ -22,6 +27,7 @@ function App() {
                 <Route path="/" component={TopBar} />
                 <Route exact path="/" component={NoteList} />
                 <Route exact path="/:user/:note" component={NoteDetail} />
+                <Route exact path="/login" component={Login} />
             </div>
         </BrowserRouter>
     );

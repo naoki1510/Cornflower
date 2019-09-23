@@ -11,11 +11,19 @@ import DrawerMenu from './DrawerMenu';
 
 const TopBar = (props) => {
     const [drawerOpen, setDrawerOpen] = useState(false);
+    const [prevPath, setPrevPath] = useState(props.location.pathname);
+
+    console.log(prevPath + ':' + props.location.pathname);
+    if(prevPath !== props.location.pathname){
+        setPrevPath(props.location.pathname);
+        setDrawerOpen (false);
+    }
+
 
     return (
         <div>
+            <DrawerMenu isOpen={drawerOpen} setOpen={setDrawerOpen} />
             <TopAppBar>
-                <DrawerMenu isOpen={drawerOpen} setOpen={setDrawerOpen}/>
                 <TopAppBarRow>
                     <TopAppBarSection align="start">
                         <TopAppBarIcon navIcon tabIndex={0}>

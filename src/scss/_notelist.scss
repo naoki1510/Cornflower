@@ -1,8 +1,16 @@
+.infinite-scroll-component {
+    width: 100%;
+}
+
 .notelist {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
 
     .mdc-card {
-        width: 350px;
+        width: 100%;
+        max-width: 400px;
         margin: 1rem;
 
         a{
@@ -34,10 +42,20 @@
                     }
                 }
             }
+
+            .description{
+                padding: 1rem;
+            }
         }
 
         .recharts-responsive-container {
             flex: 1;
+        }
+
+        .mdc-card__action-icons{
+            .fav_number{
+                padding-left: 0;
+            }
         }
     }
 }

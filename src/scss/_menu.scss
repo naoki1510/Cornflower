@@ -1,3 +1,12 @@
-ul a{
-    text-decoration: none
+.mdc-drawer{
+    .drawer__username{
+        padding: 1rem;
+        margin-bottom: 0;
+    }
+
+    .mdc-list{
+        a{
+            text-decoration: none;
+        }
+    }
 }
